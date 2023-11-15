@@ -1,0 +1,54 @@
+conda create --name alura_pandas python=3.6 pandas=0.22.0
+
+Será exibido os pacotes a serem instalados, e caso utilizemos uma versão ultrapassada, atualizações serão realizadas. Pressionaremos a tecla "Y" para finalizarmos o processo.
+
+Voltaremos Anaconda Navigator, na área "Enviroments". Verificaremos que alura_pandas já está disponível:
+
+ ambientes "base(root)" e "alura_pandas" disponíveis
+
+Ao clicarmos sobre ele, poderemos conhecer todos os elementos instalados, inclusive o Pandas. Clicaremos em "Home" no menu principal, e de volta ao espaço principal do Anaconda Navigator, selecionaremos alura_pandas no boc "Applications on".
+
+
+Precisamos instalar o Jupyter. Para isso, basta clicar sobre o botão "Install", logo abaixo do ícone da ferramenta, ainda na página home do Anaconda.
+
+
+
+Quando a instalação for finalizada, clicaremos sobre o botão "Launch". Em seguida, clicaremos sobre "New > Pythons 2". Poderemos começar a construir nosso código com o channel Python 2. Antes, acessaremos o prompt e faremos algumas configurações adicionais e aprenderemos mais sobre conda e ambientes virtuais.
+
+Para ativarmos um ambiente fora da via Anaconda, precisamos utilizar o comando activate e passar o nome do ambiente alura_pandas
+
+activate alura_pandas
+
+Assim feito, já teremos acessado alura_pandas, que aparecerá entre parênteses. Em seguida, escreveremos python para iniciá-lo.
+
+(alura_pandas) C:Users\Alura>python
+
+Teremos acesso a versão do Python utilizada. Em seguida, faremos a importação do Pandas:
+import pandas
+
+Para acessarmos a versão utilizada escreveremos o comando:
+
+pandas.__version__
+
+Para sairmos do ambiente virtual alura_pandas, utilizamos o comando:
+
+deactivate
+
+Dessa forma, retornamos para a versão base:
+
+C:\Users\Alura>
+
+Para visualizar os ambientes disponíveis escreveremos os comandos:
+conda info --envs
+Atualmente, possuímos o ambiente alura_pandas e a versão base:
+# conda environments:
+#
+base             * C:\Users\Alura\Anaconda3
+alura_pandas       C:\Users\Alura\envs\alura_pandas
+
+Para excluirmos os ambientes criados, utilizamos o comando conda remove --name, o nome do ambiente a ser deletado, por fim --all:
+
+conda remove --name alura_pandas --all 
+
+Dessa forma, o ambiente terá sido removido e não pode mais ser acessado via Anaconda.Temos todo o ferramental básico para iniciar o curso, agora podemos começar a codificar em Pandas.
+
